@@ -9,16 +9,21 @@
 import UIKit
 
 class StreamTableViewCell: UITableViewCell {
+    @IBOutlet weak var streamImageView: UIImageView!
+    @IBOutlet weak var broadcasterLabel: UILabel!
+    @IBOutlet weak var streamNameLabel: UILabel!
+    @IBOutlet weak var viewersCountLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configureCell(_ stream: Stream) {
+        broadcasterLabel.text = stream.broadcasterName
+        streamNameLabel.text = stream.streamTitle
+
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        viewersCountLabel.text = "\(formatter.string(from: NSNumber(value: stream.streamViewerCount))!) viewers"
+
+        if stream.streamImage != nil {
+            streamImageView.image = stream.streamImage
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

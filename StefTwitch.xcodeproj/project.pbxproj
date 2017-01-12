@@ -7,21 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		323B8A99881498B0E7031557 /* Pods_StefTwitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359DC7DED12B781BC2B81ECF /* Pods_StefTwitch.framework */; };
 		8F8743301DE33EEA0077AE80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F87432F1DE33EEA0077AE80 /* AppDelegate.swift */; };
-		8F8743321DE33EEA0077AE80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8743311DE33EEA0077AE80 /* ViewController.swift */; };
 		8F8743351DE33EEA0077AE80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8743331DE33EEA0077AE80 /* Main.storyboard */; };
 		8F8743371DE33EEA0077AE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F8743361DE33EEA0077AE80 /* Assets.xcassets */; };
 		8F87433A1DE33EEA0077AE80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F8743381DE33EEA0077AE80 /* LaunchScreen.storyboard */; };
+		8F8743431DE345FC0077AE80 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8743421DE345FC0077AE80 /* GamesViewController.swift */; };
+		8F8743451DE3464F0077AE80 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8743441DE3464F0077AE80 /* Constants.swift */; };
+		8F8743471DE349A20077AE80 /* GameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8743461DE349A20077AE80 /* GameCollectionViewCell.swift */; };
+		8F87434D1DE34E520077AE80 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F87434C1DE34E520077AE80 /* Game.swift */; };
+		8F8743501DE351460077AE80 /* GameDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F87434F1DE351460077AE80 /* GameDataService.swift */; };
+		8F87438B1DE4935E0077AE80 /* StreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F87438A1DE4935E0077AE80 /* StreamsViewController.swift */; };
+		8F87438D1DE495070077AE80 /* StreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F87438C1DE495070077AE80 /* StreamTableViewCell.swift */; };
+		8F87438F1DE495E90077AE80 /* StreamDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F87438E1DE495E90077AE80 /* StreamDataService.swift */; };
+		8F8743911DE49CFC0077AE80 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8743901DE49CFC0077AE80 /* Stream.swift */; };
+		8F8743931DE4A9880077AE80 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8743921DE4A9880077AE80 /* ChannelViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8F8743411DE345A80077AE80 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		359DC7DED12B781BC2B81ECF /* Pods_StefTwitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StefTwitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51E94A2C7F8857072468BA74 /* Pods-StefTwitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StefTwitch.release.xcconfig"; path = "Pods/Target Support Files/Pods-StefTwitch/Pods-StefTwitch.release.xcconfig"; sourceTree = "<group>"; };
 		8F87432C1DE33EEA0077AE80 /* StefTwitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StefTwitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F87432F1DE33EEA0077AE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F8743311DE33EEA0077AE80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F8743341DE33EEA0077AE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F8743361DE33EEA0077AE80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F8743391DE33EEA0077AE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F87433B1DE33EEA0077AE80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F8743421DE345FC0077AE80 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		8F8743441DE3464F0077AE80 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F8743461DE349A20077AE80 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
+		8F87434C1DE34E520077AE80 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8F87434F1DE351460077AE80 /* GameDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDataService.swift; sourceTree = "<group>"; };
+		8F87438A1DE4935E0077AE80 /* StreamsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamsViewController.swift; sourceTree = "<group>"; };
+		8F87438C1DE495070077AE80 /* StreamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamTableViewCell.swift; sourceTree = "<group>"; };
+		8F87438E1DE495E90077AE80 /* StreamDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamDataService.swift; sourceTree = "<group>"; };
+		8F8743901DE49CFC0077AE80 /* Stream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		8F8743921DE4A9880077AE80 /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		B280885923DC0EB89316A4A1 /* Pods-StefTwitch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StefTwitch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StefTwitch/Pods-StefTwitch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				323B8A99881498B0E7031557 /* Pods_StefTwitch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +75,8 @@
 			children = (
 				8F87432E1DE33EEA0077AE80 /* StefTwitch */,
 				8F87432D1DE33EEA0077AE80 /* Products */,
+				A9D41C7EDF8CC357DDF3020E /* Pods */,
+				BC8F98F94CC22281679069F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +92,79 @@
 			isa = PBXGroup;
 			children = (
 				8F87432F1DE33EEA0077AE80 /* AppDelegate.swift */,
-				8F8743311DE33EEA0077AE80 /* ViewController.swift */,
+				8F87434A1DE34DF20077AE80 /* Model */,
+				8F8743491DE34DD90077AE80 /* View */,
+				8F8743481DE34DB30077AE80 /* Controller */,
+				8F87434E1DE351160077AE80 /* Services */,
+				8F87434B1DE34E050077AE80 /* Utilities */,
+			);
+			path = StefTwitch;
+			sourceTree = "<group>";
+		};
+		8F8743481DE34DB30077AE80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F8743421DE345FC0077AE80 /* GamesViewController.swift */,
+				8F87438A1DE4935E0077AE80 /* StreamsViewController.swift */,
+				8F8743921DE4A9880077AE80 /* ChannelViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8F8743491DE34DD90077AE80 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				8F8743331DE33EEA0077AE80 /* Main.storyboard */,
+				8F8743461DE349A20077AE80 /* GameCollectionViewCell.swift */,
 				8F8743361DE33EEA0077AE80 /* Assets.xcassets */,
 				8F8743381DE33EEA0077AE80 /* LaunchScreen.storyboard */,
 				8F87433B1DE33EEA0077AE80 /* Info.plist */,
+				8F87438C1DE495070077AE80 /* StreamTableViewCell.swift */,
 			);
-			path = StefTwitch;
+			name = View;
+			sourceTree = "<group>";
+		};
+		8F87434A1DE34DF20077AE80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8F87434C1DE34E520077AE80 /* Game.swift */,
+				8F8743901DE49CFC0077AE80 /* Stream.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8F87434B1DE34E050077AE80 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8F8743441DE3464F0077AE80 /* Constants.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		8F87434E1DE351160077AE80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8F87434F1DE351460077AE80 /* GameDataService.swift */,
+				8F87438E1DE495E90077AE80 /* StreamDataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		A9D41C7EDF8CC357DDF3020E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B280885923DC0EB89316A4A1 /* Pods-StefTwitch.debug.xcconfig */,
+				51E94A2C7F8857072468BA74 /* Pods-StefTwitch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC8F98F94CC22281679069F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				359DC7DED12B781BC2B81ECF /* Pods_StefTwitch.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +174,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F87433E1DE33EEA0077AE80 /* Build configuration list for PBXNativeTarget "StefTwitch" */;
 			buildPhases = (
+				4E86C0832876C4925C8EDFBB /* [CP] Check Pods Manifest.lock */,
 				8F8743281DE33EEA0077AE80 /* Sources */,
 				8F8743291DE33EEA0077AE80 /* Frameworks */,
 				8F87432A1DE33EEA0077AE80 /* Resources */,
+				D5B0AE52E0C02079EAA547A8 /* [CP] Embed Pods Frameworks */,
+				68C31C183ADCF4F36290EB37 /* [CP] Copy Pods Resources */,
+				8F8743411DE345A80077AE80 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -97,6 +204,7 @@
 					8F87432B1DE33EEA0077AE80 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Q562T6NCPA;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,13 +240,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E86C0832876C4925C8EDFBB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		68C31C183ADCF4F36290EB37 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StefTwitch/Pods-StefTwitch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5B0AE52E0C02079EAA547A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StefTwitch/Pods-StefTwitch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8F8743281DE33EEA0077AE80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F8743321DE33EEA0077AE80 /* ViewController.swift in Sources */,
+				8F87438B1DE4935E0077AE80 /* StreamsViewController.swift in Sources */,
+				8F8743471DE349A20077AE80 /* GameCollectionViewCell.swift in Sources */,
+				8F87434D1DE34E520077AE80 /* Game.swift in Sources */,
+				8F87438D1DE495070077AE80 /* StreamTableViewCell.swift in Sources */,
+				8F8743431DE345FC0077AE80 /* GamesViewController.swift in Sources */,
+				8F8743501DE351460077AE80 /* GameDataService.swift in Sources */,
 				8F8743301DE33EEA0077AE80 /* AppDelegate.swift in Sources */,
+				8F8743931DE4A9880077AE80 /* ChannelViewController.swift in Sources */,
+				8F87438F1DE495E90077AE80 /* StreamDataService.swift in Sources */,
+				8F8743451DE3464F0077AE80 /* Constants.swift in Sources */,
+				8F8743911DE49CFC0077AE80 /* Stream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +422,7 @@
 		};
 		8F87433F1DE33EEA0077AE80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B280885923DC0EB89316A4A1 /* Pods-StefTwitch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q562T6NCPA;
@@ -270,6 +436,7 @@
 		};
 		8F8743401DE33EEA0077AE80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E94A2C7F8857072468BA74 /* Pods-StefTwitch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Q562T6NCPA;
@@ -300,6 +467,7 @@
 				8F8743401DE33EEA0077AE80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,26 +1,206 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9R2-Nu-SRJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Games View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GamesViewController" customModule="StefTwitch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EiZ-2W-Nf8">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wMT-Y7-ghV">
+                                    <size key="itemSize" width="150" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="yUu-Br-RG9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </activityIndicatorView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCollectionViewCell" id="WFK-8y-9dJ" customClass="GameCollectionViewCell" customModule="StefTwitch" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="150" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ny6-ym-r4h">
+                                                    <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Ny6-ym-r4h" secondAttribute="bottom" id="IM3-nR-eT2"/>
+                                            <constraint firstItem="Ny6-ym-r4h" firstAttribute="top" secondItem="WFK-8y-9dJ" secondAttribute="top" id="dXb-Hc-jsq"/>
+                                            <constraint firstItem="Ny6-ym-r4h" firstAttribute="leading" secondItem="WFK-8y-9dJ" secondAttribute="leading" id="iNt-Ns-qdp"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ny6-ym-r4h" secondAttribute="trailing" id="oPf-eT-6E5"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="gameImageView" destination="Ny6-ym-r4h" id="b7B-NM-vSW"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EiZ-2W-Nf8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="aD5-Kz-i32"/>
+                            <constraint firstAttribute="trailing" secondItem="EiZ-2W-Nf8" secondAttribute="trailing" id="mSO-eo-V0f"/>
+                            <constraint firstItem="EiZ-2W-Nf8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rsa-g7-xaK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EiZ-2W-Nf8" secondAttribute="bottom" id="seT-PC-Q8V"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5Us-Uj-aPf"/>
+                    <connections>
+                        <outlet property="gamesCollectionView" destination="EiZ-2W-Nf8" id="m3I-wE-gpc"/>
+                        <outlet property="loadingIndicator" destination="yUu-Br-RG9" id="JG1-ga-9oq"/>
+                        <segue destination="wY7-PI-tbG" kind="show" identifier="streamShowViewController" id="0bQ-PK-Edj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="903" y="793"/>
+        </scene>
+        <!--Streams View Controller-->
+        <scene sceneID="y6c-dM-Qcl">
+            <objects>
+                <viewController id="wY7-PI-tbG" customClass="StreamsViewController" customModule="StefTwitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0q7-p6-7kv"/>
+                        <viewControllerLayoutGuide type="bottom" id="x0O-Yj-rqP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pft-lq-7qd">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Quk-GP-FRN">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StreamCell" rowHeight="200" id="MkW-4N-cSG" customClass="StreamTableViewCell" customModule="StefTwitch" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MkW-4N-cSG" id="rGo-Gn-DnE">
+                                            <frame key="frameInset" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QuN-OL-5c4">
+                                                    <color key="backgroundColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-fD-vZT">
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Broadcaster" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONo-RO-eG1">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stream title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nio-BX-ib8">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viewers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4i-ea-coM">
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="QuN-OL-5c4" secondAttribute="trailing" constant="8" id="NQf-C4-gl7"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rvc-fD-vZT" secondAttribute="bottom" constant="8" id="YVX-5p-kXY"/>
+                                                <constraint firstItem="rvc-fD-vZT" firstAttribute="width" secondItem="QuN-OL-5c4" secondAttribute="width" multiplier="0.8" id="bVb-TP-FNm"/>
+                                                <constraint firstItem="rvc-fD-vZT" firstAttribute="height" secondItem="QuN-OL-5c4" secondAttribute="height" multiplier="0.3" id="d0r-tc-DTE"/>
+                                                <constraint firstAttribute="bottom" secondItem="QuN-OL-5c4" secondAttribute="bottom" constant="2" id="eof-Mg-dyW"/>
+                                                <constraint firstItem="QuN-OL-5c4" firstAttribute="top" secondItem="rGo-Gn-DnE" secondAttribute="top" constant="8" id="feK-1q-5fj"/>
+                                                <constraint firstItem="rvc-fD-vZT" firstAttribute="leading" secondItem="rGo-Gn-DnE" secondAttribute="leadingMargin" constant="8" id="h7i-FH-KJH"/>
+                                                <constraint firstItem="QuN-OL-5c4" firstAttribute="leading" secondItem="rGo-Gn-DnE" secondAttribute="leading" constant="8" id="x4i-3H-1Cm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="broadcasterLabel" destination="ONo-RO-eG1" id="pN2-as-msZ"/>
+                                            <outlet property="streamImageView" destination="QuN-OL-5c4" id="4SE-4g-Bpf"/>
+                                            <outlet property="streamNameLabel" destination="nio-BX-ib8" id="e1X-2g-BtQ"/>
+                                            <outlet property="viewersCountLabel" destination="W4i-ea-coM" id="1eW-NQ-6Dw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Quk-GP-FRN" secondAttribute="trailing" id="217-xa-RWe"/>
+                            <constraint firstItem="x0O-Yj-rqP" firstAttribute="top" secondItem="Quk-GP-FRN" secondAttribute="bottom" id="5b4-Pa-hLS"/>
+                            <constraint firstItem="Quk-GP-FRN" firstAttribute="top" secondItem="0q7-p6-7kv" secondAttribute="bottom" id="8K8-pN-Jts"/>
+                            <constraint firstItem="Quk-GP-FRN" firstAttribute="leading" secondItem="Pft-lq-7qd" secondAttribute="leading" id="aqn-ng-2jf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="streamsTableView" destination="Quk-GP-FRN" id="R83-7Q-jki"/>
+                        <segue destination="LNV-Es-ekY" kind="show" identifier="channelShowViewController" id="Jab-h3-x07"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hOk-Jf-txN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.5999999999999" y="792.95352323838085"/>
+        </scene>
+        <!--Channel View Controller-->
+        <scene sceneID="xCF-HW-zot">
+            <objects>
+                <viewController id="LNV-Es-ekY" customClass="ChannelViewController" customModule="StefTwitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ck-d8-ksE"/>
+                        <viewControllerLayoutGuide type="bottom" id="dKL-3f-bxx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f6A-Vu-7es">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCp-Bi-tmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="793"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sAZ-as-Caz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9R2-Nu-SRJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="swj-8m-gBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.25098040700000002" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Qyn-wn-zIy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ryg-ih-ALR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="792.95352323838085"/>
         </scene>
     </scenes>
 </document>
